@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+
 
 @Component({
     selector: 'app-user',
     templateUrl: './user.component.html',
     styleUrl: './user.component.css',
     standalone: true,
-    imports: [NgFor],
+    imports: [],
 })
 export class UserComponent {
   users: any;
