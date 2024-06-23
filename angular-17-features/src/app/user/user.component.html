@@ -1,8 +1,18 @@
 <h1>Users</h1>
 <div>
   @for (user of users; track user) {
-    <li>
-      {{user.username}}
-    </li>
+    @if(user.age < 30){
+      <li>{{ user.username }} has the age of {{ user.age }}</li>
+
+    }
+
   }
+
+  @for (user of users; track user) {
+    @switch (user.age) {
+      @case (32) {
+        <p>User {{user.username}} is not eligible as his age is {{user.age}}</p>
+      }
+  }
+}
 </div>

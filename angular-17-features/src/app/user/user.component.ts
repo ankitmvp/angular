@@ -13,7 +13,7 @@ export class UserComponent {
   constructor() {}
   ngOnInit() {
     fetch('http://dummyjson.com/users').then((res) =>
-      res.json().then((data) => (this.users = data.users))
+      res.json().then((data) => (this.users = data.users)).then((users) => {console.log(users)})
     );
   }
 }
